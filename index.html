@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Weather Dashboard</h1>
+        <p>Check the weather in your city</p>
+    </header>
+
+    <main>
+        <form id="search-form">
+            <input
+                type="text"
+                id="city-input"
+                placeholder="Enter city name"
+                required
+            >
+            <button type="submit">Search</button>
+        </form>
+
+        <p id="loading" class="hidden">Loading weather...</p>
+
+        <p id="error" class="hidden"></p>
+
+        <section id="weather-display" class="hidden">
+            <h2 id="city-name"></h2>
+
+            <img id="weather-icon" src="" alt="Weather icon">
+
+            <h2 id="temperature"></h2>
+
+            <p id="description"></p>
+
+            <div class="details">
+                <div class="detail">
+                    <span>Feels Like:</span>
+                    <span id="feels-like"></span>
+                </div>
+
+                <div class="detail">
+                    <span>Humidity:</span>
+                    <span id="humidity"></span>
+                </div>
+
+                <div class="detail">
+                    <span>Wind:</span>
+                    <span id="wind"></span>
+                </div>
+
+                <div class="detail">
+                    <span>Pressure:</span>
+                    <span id="pressure"></span>
+                </div>
+            </div>
+        </section>
+
+        <section id="recent-searches">
+            <h3>Recent Searches</h3>
+            <ul id="search-history"></ul>
+        </section>
+
+    </main>
+
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+
+</body>
+</html>
